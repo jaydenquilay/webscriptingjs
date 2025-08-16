@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayden Quilay</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/lgw1uvn.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+<!-- Plugins CSS -->
+<!-- AOS CSS removed -->
+</head>
+<body>
+
+<div class="top">
+  <header>jayden quilay</header>
+  
+  <div class="nav">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+
+  <button class="mobile-toggle">menu</button>
+  <div class="mobile-dropdown">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+</div>
+
+<hr>
+
+<div class="container contact">
+    <h2>if you have any questions, feel free to contact me whenever! <br>
+    i'll be sure to respond in time.</h2>
+    <hr>
+    <form id="contactForm">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+</div>
+
+<hr>
+
+<footer>
+    <div class="nav">
+    <a href="https://www.instagram.com/loathefan465/" class="instagram" target="_blank">instagram</a>
+    <a href="https://www.youtube.com/@quiIay" class="youtube" target="_blank">youtube</a>
+    <a href="https://x.com/jaydenquilay" class="x" target="_blank">twitter</a>
+    <a href="https://www.last.fm/user/Quilay" class="lastfm" target="_blank">last.fm</a>
+    </div>
+    <p>&copy; 2025 Jayden Quilay</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script>
+
+// this toggles mobile dropdown menu when menu button is clicked
+// switches between showing/hiding the dropdown by checking current display state
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+  const dropdown = document.querySelector('.mobile-dropdown');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+$("#contactForm").validate();
+</script>
+</body>
+</html>

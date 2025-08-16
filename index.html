@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayden Quilay</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/lgw1uvn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="top">
+  <header>jayden quilay</header>
+  
+  <div class="nav">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+
+  <button class="mobile-toggle">menu</button>
+  <div class="mobile-dropdown">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+
+    <h1>photo of the month: blood moon</h1>
+    <h2>1" f/5.6 iso800</h2>
+
+        <img src="images/IMG_4928-6.jpg" loading="lazy" alt="blood moon">
+
+    <h1>an aspiring photographer <br>
+    ui/ux/graphic designer</h1>
+</div>
+
+<hr>
+
+<footer>
+    <div class="nav">
+    <a href="https://www.instagram.com/loathefan465/" class="instagram" target="_blank">instagram</a>
+    <a href="https://www.youtube.com/@quiIay" class="youtube" target="_blank">youtube</a>
+    <a href="https://x.com/jaydenquilay" class="x" target="_blank">twitter</a>
+    <a href="https://www.last.fm/user/Quilay" class="lastfm" target="_blank">last.fm</a>
+    </div>
+    <p>&copy; 2025 Jayden Quilay</p>
+</footer>
+
+<script>
+// this toggles mobile dropdown menu when menu button is clicked
+// switches between showing/hiding the dropdown by checking current display state
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+  const dropdown = document.querySelector('.mobile-dropdown');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+
+</body>
+</html>

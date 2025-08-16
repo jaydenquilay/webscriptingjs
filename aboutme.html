@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayden Quilay</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/lgw1uvn.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="top">
+  <header>jayden quilay</header>
+  
+  <div class="nav">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+
+  <button class="mobile-toggle">menu</button>
+  <div class="mobile-dropdown">
+    <a href="index.html">home</a>
+    <a href="aboutme.html">about me</a>
+    <a href="portfolio.html">portfolio</a>
+    <a href="contact.html">contact</a>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <h2>about me</h2>
+    <img src="images/DSC00072.jpg" loading="lazy" alt="me!">
+    <p>i'm <em>jayden quilay</em>, a student at bcit's new media and web development program.</p>
+    <a class="popup-link" href="#aboutModal" data-aos="fade-up">Read More</a>
+
+<div class="modal-overlay">
+
+<div class="modal">
+        <div class="model-content">
+        <h2>More About Me</h2>
+        <p>growing up, i always considered myself to be more into creative arts rather than into traditional academics.</p>
+        <p>i am more fascinated by the art and design of things, which led me to pursue a career in photography.
+        graphic design and ui/ux also fall into this category, as it was natural for me to get into.</p>
+        <p>i haven't done much to showcase my skills, but eventually i'll be able to provide examples of my work
+        in the near future.</p>
+        <p>i'm 19, being born in vancouver, canada, and i'm ethnically filipino.</p>
+        <p>avid music listener and video game fanatic in my free time. i mostly play
+        overwatch2, rainbow6siege, teamfortress2 and chivalry2.</p>
+        <p>i'm also a big hockey fan, and of course my favourite team is the vancouver canucks.</p>
+        </div>
+        <hr>
+        <h2>Heres some cool facts about me!</h2>
+        <div class="list-column">
+            <div class="list left">
+                <ul>
+                    <li>conceptualized a clothing brand called starborne*</li>
+                    <li>built some custom keyboards and willing to get more.</li>
+                    <li>highly interested in geography and history, with niche interests such as flag designing and map designing.</li>
+                </ul>
+            </div>
+            <div class="list right">
+                <ul>
+                    <li>collecting vinyls of albums that i've enjoyed. i also like collecting other things like plushies, toy cars, and shoes.</li>
+                    <li>from 2017-2021, kpop was my most played genre of music.</li>
+                    <li>really into fashion.</li>
+                </ul>
+            </div>
+        </div>
+        <img src="images/finished.png" alt="keyboard, starborne logo, vinyls, kpop albums" style="max-width:100%; height:auto; margin-top:20px;">
+        <button class="back">Close</button>
+        </div>
+    </div>
+</div>
+    
+<hr>
+
+<footer>
+    <div class="nav">
+    <a href="https://www.instagram.com/loathefan465/" class="instagram" target="_blank">instagram</a>
+    <a href="https://www.youtube.com/@quiIay" class="youtube" target="_blank">youtube</a>
+    <a href="https://x.com/jaydenquilay" class="x" target="_blank">twitter</a>
+    <a href="https://www.last.fm/user/Quilay" class="lastfm" target="_blank">last.fm</a>
+    </div>
+    <p>&copy; 2025 Jayden Quilay</p>
+</footer>
+
+<script>
+
+// this toggles mobile dropdown menu when menu button is clicked
+// switches between showing/hiding the dropdown by checking current display state
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+  const dropdown = document.querySelector('.mobile-dropdown');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+// when the page finishes loading, set up our modal functionality
+document.addEventListener("DOMContentLoaded", () => {
+  // get all the elements we'll need
+  const openBtn = document.querySelector('.popup-link');
+  const closeBtn = document.querySelector('.back');
+  const modal = document.querySelector('.modal');
+  const overlay = document.querySelector('.modal-overlay');
+
+  // when someone clicks the open button
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // stop the link from doing its normal thing
+    
+    // fade in the dimmed background
+    gsap.to(overlay, { 
+      opacity: 1,
+      pointerEvents: 'auto',
+      duration: 0.4
+    });
+    
+    // animate the popup window
+    gsap.to(modal, { 
+      opacity: 1,
+      scale: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  });
+
+  // handles closing the popup
+  function closeModal() {
+    // fade out the popup
+    gsap.to(modal, { 
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.4,
+      ease: 'power2.in'
+    });
+    
+    // fade out the dimmed background
+    gsap.to(overlay, { 
+      opacity: 0,
+      pointerEvents: 'none',
+      duration: 0.4 
+    });
+  }
+
+  // setting up closing
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+});
+</script>
+
+</body>
+</html>
